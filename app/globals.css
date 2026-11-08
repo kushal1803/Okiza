@@ -1,26 +1,62 @@
 @import "tailwindcss";
 
+@theme {
+  --color-background: #0b0a09;
+  --color-foreground: #f0ede8;
+  --color-border: #2a2825;
+  --color-primary: #c8f04d;
+  --color-primary-foreground: #0b0a09;
+  --color-card: #161513;
+  --color-muted-foreground: #8a8580;
+  --font-body: var(--font-geist-sans), -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-headings: var(--font-geist-sans), -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #0b0a09;
+  --foreground: #f0ede8;
+  --color-background: #0b0a09;
+  --color-foreground: #f0ede8;
+  --color-border: #2a2825;
+  --color-primary: #c8f04d;
+  --color-primary-foreground: #0b0a09;
+  --color-card: #161513;
+  --color-muted-foreground: #8a8580;
+  --font-body: var(--font-geist-sans), -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-headings: var(--font-geist-sans), -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+html, body {
+  background-color: #0b0a09;
+  color: #f0ede8;
+  font-family: var(--font-geist-sans), -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  color-scheme: dark;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+::-webkit-scrollbar-track {
+  background: #0b0a09;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #2a2825;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #3a3835;
+}
+
+/* Smooth glow effect */
+.glow-primary {
+  box-shadow: 0 0 40px -10px rgba(200, 240, 77, 0.25);
+}
+
+.glow-card {
+  box-shadow: 0 4px 24px -2px rgba(0, 0, 0, 0.5);
 }
