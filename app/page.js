@@ -13,7 +13,7 @@ import Footer from "@/components/Footer";
 export default function Home() {
   return (
     <div
-      className="bg-[#0b0a09] min-h-screen text-[#f0ede8] selection:bg-[#c8f04d] selection:text-[#0b0a09] relative"
+      className="bg-[#000000] min-h-screen text-[#ffffff] selection:bg-[#ffffff] selection:text-[#000000] relative"
       data-component="@screens/OkizaLanding.jsx"
     >
       {/* Top sticky navigation bar */}

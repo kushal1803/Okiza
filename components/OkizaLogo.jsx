@@ -1,17 +1,13 @@
-import Image from "next/image";
-
 export default function OkizaLogo({
   size = 28,
-  variant = "lime", // "lime" | "white" | "black"
+  variant = "white", // default to white for monochrome theme
   className = "",
   alt = "Okiza Logo",
 }) {
   const src =
-    variant === "white"
-      ? "/logo-white.png"
-      : variant === "black"
+    variant === "black"
       ? "/logo-black.png"
-      : "/logo-lime.png";
+      : "/logo-white.png";
 
   return (
     <div
@@ -23,7 +19,7 @@ export default function OkizaLogo({
         alt={alt}
         width={size}
         height={size}
-        className="w-full h-full object-contain filter drop-shadow-[0_0_8px_rgba(200,240,77,0.35)]"
+        className="w-full h-full object-contain filter drop-shadow-[0_0_8px_rgba(255,255,255,0.25)]"
       />
     </div>
   );

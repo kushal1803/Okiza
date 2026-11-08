@@ -16,7 +16,7 @@ export const metadata = {
   description:
     "From competitor intelligence to market opportunities, building strategies and creating campaigns — Okiza brings your entire growth workflow into one intelligent platform.",
   icons: {
-    icon: "/favicon.ico",
+    icon: "/logo-white.png",
   },
 };
 
@@ -26,7 +26,7 @@ export default function RootLayout({ children }) {
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased dark`}
     >
-      <body className="min-h-full flex flex-col bg-[#0b0a09] text-[#f0ede8]">
+      <body className="min-h-full flex flex-col bg-[#000000] text-[#ffffff]">
         {children}
       </body>
     </html>

@@ -49,22 +49,22 @@ export default function CompetitiveSection() {
   return (
     <section
       id="competitive"
-      className="w-full px-6 sm:px-12 md:px-20 py-20 bg-[#0b0a09]"
+      className="w-full px-6 sm:px-12 md:px-20 py-20 bg-[#000000]"
       data-component="@components/CompetitiveSection.jsx"
     >
-      <div className="border-t border-[#2a2825] pt-20">
+      <div className="border-t border-[#262626] pt-20">
         <div className="flex flex-col lg:flex-row gap-12 lg:gap-16 items-start">
           {/* Left Column */}
           <div className="flex flex-col w-full lg:max-w-[420px] lg:min-w-[360px]">
-            <p className="text-xs font-medium tracking-widest text-[#c8f04d] uppercase mb-4">
+            <p className="text-xs font-medium tracking-widest text-[#ffffff] uppercase mb-4">
               Competitive Intelligence
             </p>
             <h2
-              className="font-semibold text-[#f0ede8] mb-5 tracking-tight text-3xl sm:text-4xl md:text-[38px] leading-[1.15]"
+              className="font-semibold text-[#ffffff] mb-5 tracking-tight text-3xl sm:text-4xl md:text-[38px] leading-[1.15]"
             >
               Know your competitors. Find your advantage.
             </h2>
-            <p className="text-base text-[#8a8580] mb-8 leading-relaxed">
+            <p className="text-base text-[#a1a1aa] mb-8 leading-relaxed">
               Okiza discovers relevant competitors, analyses how they position
               themselves and identifies the opportunities your business can capture
               before they do.
@@ -76,39 +76,39 @@ export default function CompetitiveSection() {
                 <div key={idx} className="flex items-center gap-2.5">
                   <div
                     className="w-4 h-4 rounded-full flex items-center justify-center shrink-0"
-                    style={{ background: "rgba(200, 240, 77, 0.1)" }}
+                    style={{ background: "rgba(255, 255, 255, 0.1)" }}
                   >
-                    <Check className="w-2.5 h-2.5 text-[#c8f04d]" strokeWidth={3} />
+                    <Check className="w-2.5 h-2.5 text-[#ffffff]" strokeWidth={3} />
                   </div>
-                  <span className="text-sm text-[#8a8580]">{feature}</span>
+                  <span className="text-sm text-[#a1a1aa]">{feature}</span>
                 </div>
               ))}
             </div>
 
             {/* Opportunity Callout Card */}
             <div
-              className="rounded-lg border p-4 shadow-lg transition-all hover:border-[#c8f04d]/40"
+              className="rounded-lg border p-4 shadow-lg transition-all hover:border-[#ffffff]/40"
               style={{
-                background: "rgba(200, 240, 77, 0.04)",
-                borderColor: "rgba(200, 240, 77, 0.2)",
+                background: "rgba(255, 255, 255, 0.03)",
+                borderColor: "rgba(255, 255, 255, 0.15)",
               }}
             >
               <div className="flex items-center gap-2 mb-2">
-                <div className="w-4 h-4 rounded-full bg-[#c8f04d] flex items-center justify-center">
-                  <Zap className="w-2.5 h-2.5 text-[#0b0a09] fill-[#0b0a09]" />
+                <div className="w-4 h-4 rounded-full bg-[#ffffff] flex items-center justify-center">
+                  <Zap className="w-2.5 h-2.5 text-[#000000] fill-[#000000]" />
                 </div>
-                <span className="text-xs font-semibold text-[#c8f04d]">
+                <span className="text-xs font-semibold text-[#ffffff]">
                   Opportunity detected
                 </span>
               </div>
-              <p className="text-xs text-[#8a8580] leading-relaxed mb-3">
+              <p className="text-xs text-[#a1a1aa] leading-relaxed mb-3">
                 Your competitors have stronger search visibility for three
                 high-intent customer queries. Build targeted landing pages to capture
                 this demand.
               </p>
               <button
                 onClick={() => alert("Launching Competitive Intelligence Explorer...")}
-                className="text-xs text-[#c8f04d] font-medium flex items-center gap-1 hover:underline cursor-pointer"
+                className="text-xs text-[#ffffff] font-medium flex items-center gap-1 hover:underline cursor-pointer"
               >
                 <span>Explore Competitive Intelligence</span>
                 <ArrowRight className="w-3 h-3" />
@@ -120,19 +120,19 @@ export default function CompetitiveSection() {
           <div className="flex-1 w-full flex flex-col gap-3">
             {/* Table Header */}
             <div className="grid grid-cols-5 gap-3 px-4 mb-1">
-              <span className="text-xs text-[#8a8580] font-medium col-span-1">
+              <span className="text-xs text-[#a1a1aa] font-medium col-span-1">
                 Business
               </span>
-              <span className="text-xs text-[#8a8580] font-medium text-right">
+              <span className="text-xs text-[#a1a1aa] font-medium text-right">
                 Search
               </span>
-              <span className="text-xs text-[#8a8580] font-medium text-right">
+              <span className="text-xs text-[#a1a1aa] font-medium text-right">
                 AI Search
               </span>
-              <span className="text-xs text-[#8a8580] font-medium text-right">
+              <span className="text-xs text-[#a1a1aa] font-medium text-right">
                 Social
               </span>
-              <span className="text-xs text-[#8a8580] font-medium text-right">
+              <span className="text-xs text-[#a1a1aa] font-medium text-right">
                 Brand Score
               </span>
             </div>
@@ -143,13 +143,13 @@ export default function CompetitiveSection() {
                 key={idx}
                 className={`grid grid-cols-5 items-center gap-3 px-4 py-3 rounded-lg border transition-all ${
                   row.isYou
-                    ? "border-[#c8f04d]/30 bg-[#c8f04d]/[0.04] shadow-[0_0_20px_rgba(200,240,77,0.05)]"
-                    : "border-[#2a2825] bg-[#161513] hover:border-[#3a3835]"
+                    ? "border-[#ffffff]/30 bg-[#ffffff]/[0.05] shadow-[0_0_20px_rgba(255,255,255,0.05)]"
+                    : "border-[#262626] bg-[#111111] hover:border-[#383838]"
                 }`}
               >
                 <span
                   className={`text-sm font-medium col-span-1 truncate ${
-                    row.isYou ? "text-[#c8f04d] font-semibold" : "text-[#f0ede8]"
+                    row.isYou ? "text-[#ffffff] font-semibold" : "text-[#ffffff]"
                   }`}
                 >
                   {row.name}
@@ -167,16 +167,16 @@ export default function CompetitiveSection() {
                             background:
                               barIdx < row.search.filled
                                 ? row.isYou
-                                  ? "#c8f04d"
-                                  : "#4a4845"
-                                : "#2a2825",
+                                  ? "#ffffff"
+                                  : "#52525b"
+                                : "#262626",
                           }}
                         />
                       ))}
                     </div>
                     <span
                       className={`text-xs font-mono w-7 text-right ${
-                        row.isYou ? "text-[#c8f04d] font-semibold" : "text-[#8a8580]"
+                        row.isYou ? "text-[#ffffff] font-semibold" : "text-[#a1a1aa]"
                       }`}
                     >
                       {row.search.value}
@@ -196,16 +196,16 @@ export default function CompetitiveSection() {
                             background:
                               barIdx < row.aiSearch.filled
                                 ? row.isYou
-                                  ? "#c8f04d"
-                                  : "#4a4845"
-                                : "#2a2825",
+                                  ? "#ffffff"
+                                  : "#52525b"
+                                : "#262626",
                           }}
                         />
                       ))}
                     </div>
                     <span
                       className={`text-xs font-mono w-7 text-right ${
-                        row.isYou ? "text-[#c8f04d] font-semibold" : "text-[#8a8580]"
+                        row.isYou ? "text-[#ffffff] font-semibold" : "text-[#a1a1aa]"
                       }`}
                     >
                       {row.aiSearch.value}
@@ -225,16 +225,16 @@ export default function CompetitiveSection() {
                             background:
                               barIdx < row.social.filled
                                 ? row.isYou
-                                  ? "#c8f04d"
-                                  : "#4a4845"
-                                : "#2a2825",
+                                  ? "#ffffff"
+                                  : "#52525b"
+                                : "#262626",
                           }}
                         />
                       ))}
                     </div>
                     <span
                       className={`text-xs font-mono w-7 text-right ${
-                        row.isYou ? "text-[#c8f04d] font-semibold" : "text-[#8a8580]"
+                        row.isYou ? "text-[#ffffff] font-semibold" : "text-[#a1a1aa]"
                       }`}
                     >
                       {row.social.value}
@@ -254,16 +254,16 @@ export default function CompetitiveSection() {
                             background:
                               barIdx < row.brandScore.filled
                                 ? row.isYou
-                                  ? "#c8f04d"
-                                  : "#4a4845"
-                                : "#2a2825",
+                                  ? "#ffffff"
+                                  : "#52525b"
+                                : "#262626",
                           }}
                         />
                       ))}
                     </div>
                     <span
                       className={`text-xs font-mono w-7 text-right ${
-                        row.isYou ? "text-[#c8f04d] font-semibold" : "text-[#8a8580]"
+                        row.isYou ? "text-[#ffffff] font-semibold" : "text-[#a1a1aa]"
                       }`}
                     >
                       {row.brandScore.value}
@@ -275,18 +275,18 @@ export default function CompetitiveSection() {
 
             {/* Market Gaps Bottom Card */}
             <div
-              className="mt-4 rounded-lg border border-[#2a2825] p-4 bg-[#161513] hover:border-[#c8f04d]/30 transition-all"
+              className="mt-4 rounded-lg border border-[#262626] p-4 bg-[#111111] hover:border-[#ffffff]/30 transition-all"
             >
               <div className="flex items-center justify-between">
                 <div>
-                  <span className="text-xs font-medium text-[#f0ede8] block mb-1">
+                  <span className="text-xs font-medium text-[#ffffff] block mb-1">
                     Market Gaps Identified
                   </span>
-                  <span className="text-xs text-[#8a8580]">
+                  <span className="text-xs text-[#a1a1aa]">
                     3 high-intent keyword clusters with no strong competitor dominance
                   </span>
                 </div>
-                <div className="text-4xl font-semibold text-[#c8f04d] ml-6 font-mono">
+                <div className="text-4xl font-semibold text-[#ffffff] ml-6 font-mono">
                   3
                 </div>
               </div>
@@ -297,4 +297,3 @@ export default function CompetitiveSection() {
     </section>
   );
 }
-

@@ -11,13 +11,13 @@ export default function CapabilityCard({
   return (
     <div
       onClick={onSelect}
-      className="flex flex-col gap-4 p-5 rounded-lg border border-[#2a2825] bg-[#161513] hover:border-[#c8f04d]/40 transition-all duration-300 hover:translate-y-[-2px] group cursor-pointer"
+      className="flex flex-col gap-4 p-5 rounded-xl border border-[#262626] bg-[#111111] hover:border-[#ffffff]/50 transition-all duration-300 hover:translate-y-[-2px] hover:shadow-[0_8px_30px_rgba(0,0,0,0.8)] group cursor-pointer"
       data-component="@components/CapabilityCard.jsx"
     >
       {/* Visual Preview Box */}
       <div
-        className="w-full rounded-md overflow-hidden border border-[#2a2825] transition-colors group-hover:border-[#c8f04d]/20"
-        style={{ height: 72, background: "#111009" }}
+        className="w-full rounded-lg overflow-hidden border border-[#262626] transition-colors group-hover:border-[#ffffff]/25 relative"
+        style={{ minHeight: 112, background: "#0a0a0c" }}
       >
         {previewContent}
       </div>
@@ -25,27 +25,25 @@ export default function CapabilityCard({
       {/* Title & Icon */}
       <div className="flex items-center gap-2.5">
         <div
-          className="w-7 h-7 rounded flex items-center justify-center shrink-0 transition-transform group-hover:scale-110"
-          style={{ background: "rgba(200, 240, 77, 0.1)" }}
+          className="w-8 h-8 rounded-lg flex items-center justify-center shrink-0 bg-[#1c1c1f] border border-[#2e2e32] transition-transform group-hover:scale-105 group-hover:border-[#ffffff]/30"
         >
           {icon}
         </div>
-        <span className="text-base font-semibold text-[#f0ede8] group-hover:text-[#c8f04d] transition-colors">
+        <span className="text-base font-semibold text-[#ffffff] group-hover:text-[#ffffff] transition-colors">
           {title}
         </span>
       </div>
 
       {/* Description */}
-      <p className="text-sm text-[#8a8580] leading-relaxed flex-1">
+      <p className="text-xs sm:text-sm text-[#a1a1aa] leading-relaxed flex-1">
         {description}
       </p>
 
       {/* Action link */}
-      <div className="text-xs text-[#c8f04d] font-medium flex items-center gap-1 group-hover:gap-1.5 transition-all">
+      <div className="text-xs text-[#ffffff] font-semibold flex items-center gap-1.5 group-hover:gap-2 transition-all">
         <span>Learn more</span>
-        <ArrowRight className="w-3 h-3 transition-transform group-hover:translate-x-0.5" />
+        <ArrowRight className="w-3.5 h-3.5 transition-transform group-hover:translate-x-1" />
       </div>
     </div>
   );
 }
-

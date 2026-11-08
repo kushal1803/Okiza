@@ -30,16 +30,16 @@ export default function FAQSection() {
   ];
 
   return (
-    <section id="faq" className="w-full px-6 sm:px-12 md:px-20 py-20 bg-[#0b0a09]">
-      <div className="border-t border-[#2a2825] pt-20 max-w-4xl mx-auto">
+    <section id="faq" className="w-full px-6 sm:px-12 md:px-20 py-20 bg-[#000000]">
+      <div className="border-t border-[#262626] pt-20 max-w-4xl mx-auto">
         <div className="flex flex-col items-center text-center mb-14">
-          <p className="text-xs font-medium tracking-widest text-[#c8f04d] uppercase mb-4">
+          <p className="text-xs font-medium tracking-widest text-[#ffffff] uppercase mb-4">
             Got Questions?
           </p>
-          <h2 className="font-semibold text-[#f0ede8] mb-4 tracking-tight text-3xl sm:text-4xl leading-[1.1]">
+          <h2 className="font-semibold text-[#ffffff] mb-4 tracking-tight text-3xl sm:text-4xl leading-[1.1]">
             Frequently Asked Questions
           </h2>
-          <p className="text-sm text-[#8a8580] max-w-md">
+          <p className="text-sm text-[#a1a1aa] max-w-md">
             Everything you need to know about the Okiza platform and our AI growth operating system.
           </p>
         </div>
@@ -50,23 +50,23 @@ export default function FAQSection() {
             return (
               <div
                 key={idx}
-                className="rounded-lg border border-[#2a2825] bg-[#161513] overflow-hidden transition-colors"
+                className="rounded-lg border border-[#262626] bg-[#111111] overflow-hidden transition-colors"
               >
                 <button
                   onClick={() => setOpenIdx(isOpen ? null : idx)}
-                  className="w-full flex items-center justify-between p-5 text-left cursor-pointer hover:bg-[#1a1916] transition-colors"
+                  className="w-full flex items-center justify-between p-5 text-left cursor-pointer hover:bg-[#18181b] transition-colors"
                 >
-                  <span className="font-medium text-[#f0ede8] text-sm sm:text-base pr-4">
+                  <span className="font-medium text-[#ffffff] text-sm sm:text-base pr-4">
                     {faq.q}
                   </span>
                   <ChevronDown
-                    className={`w-4 h-4 text-[#8a8580] shrink-0 transition-transform duration-200 ${
-                      isOpen ? "rotate-180 text-[#c8f04d]" : ""
+                    className={`w-4 h-4 text-[#a1a1aa] shrink-0 transition-transform duration-200 ${
+                      isOpen ? "rotate-180 text-[#ffffff]" : ""
                     }`}
                   />
                 </button>
                 {isOpen && (
-                  <div className="px-5 pb-5 pt-1 text-xs sm:text-sm text-[#8a8580] leading-relaxed border-t border-[#2a2825]/40 animate-fadeIn">
+                  <div className="px-5 pb-5 pt-1 text-xs sm:text-sm text-[#a1a1aa] leading-relaxed border-t border-[#262626]/60">
                     {faq.a}
                   </div>
                 )}
@@ -78,4 +78,3 @@ export default function FAQSection() {
     </section>
   );
 }
-

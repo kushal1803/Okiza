@@ -1,34 +1,34 @@
 @import "tailwindcss";
 
 @theme {
-  --color-background: #0b0a09;
-  --color-foreground: #f0ede8;
-  --color-border: #2a2825;
-  --color-primary: #c8f04d;
-  --color-primary-foreground: #0b0a09;
-  --color-card: #161513;
-  --color-muted-foreground: #8a8580;
+  --color-background: #000000;
+  --color-foreground: #ffffff;
+  --color-border: #262626;
+  --color-primary: #ffffff;
+  --color-primary-foreground: #000000;
+  --color-card: #111111;
+  --color-muted-foreground: #a1a1aa;
   --font-body: var(--font-geist-sans), -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   --font-headings: var(--font-geist-sans), -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
 }
 
 :root {
-  --background: #0b0a09;
-  --foreground: #f0ede8;
-  --color-background: #0b0a09;
-  --color-foreground: #f0ede8;
-  --color-border: #2a2825;
-  --color-primary: #c8f04d;
-  --color-primary-foreground: #0b0a09;
-  --color-card: #161513;
-  --color-muted-foreground: #8a8580;
+  --background: #000000;
+  --foreground: #ffffff;
+  --color-background: #000000;
+  --color-foreground: #ffffff;
+  --color-border: #262626;
+  --color-primary: #ffffff;
+  --color-primary-foreground: #000000;
+  --color-card: #111111;
+  --color-muted-foreground: #a1a1aa;
   --font-body: var(--font-geist-sans), -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   --font-headings: var(--font-geist-sans), -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
 }
 
 html, body {
-  background-color: #0b0a09;
-  color: #f0ede8;
+  background-color: #000000;
+  color: #ffffff;
   font-family: var(--font-geist-sans), -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   color-scheme: dark;
 }
@@ -40,23 +40,72 @@ html, body {
 }
 
 ::-webkit-scrollbar-track {
-  background: #0b0a09;
+  background: #000000;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #2a2825;
+  background: #262626;
   border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #3a3835;
+  background: #404040;
 }
 
-/* Smooth glow effect */
+/* Monochrome smooth glow effects */
 .glow-primary {
-  box-shadow: 0 0 40px -10px rgba(200, 240, 77, 0.25);
+  box-shadow: 0 0 35px -5px rgba(255, 255, 255, 0.2);
 }
 
 .glow-card {
-  box-shadow: 0 4px 24px -2px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 4px 24px -2px rgba(0, 0, 0, 0.7);
+}
+
+@keyframes laserTravel {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  20% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(400%);
+    opacity: 0;
+  }
+}
+
+@keyframes scanline {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(1000%);
+  }
+}
+
+@keyframes ambientPulse {
+  0%, 100% {
+    opacity: 0.15;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.28;
+    transform: scale(1.04);
+  }
+}
+
+.animate-laser {
+  animation: laserTravel 3.5s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+}
+
+.animate-scanline {
+  animation: scanline 4s linear infinite;
+}
+
+.animate-ambient {
+  animation: ambientPulse 6s ease-in-out infinite;
 }
